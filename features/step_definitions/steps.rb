@@ -7,7 +7,7 @@ Given /^I run the experiment (\d+) times?$/ do |count|
 end
 
 When /^I go to the experiment page$/ do
-  visit("http://toned-abs.herokuapp.com/index.html")
+  visit("http://optimized-abs.herokuapp.com/index.html")
 end
 
 When /^I click on finish$/ do
