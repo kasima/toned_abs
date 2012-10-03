@@ -3,6 +3,8 @@ Given /^I run the experiment (\d+) times?$/ do |count|
     step "I go to the experiment page"
     step "I click on finish"
     Capybara.reset_sessions!
+    # binding.pry
+    page.driver.browser.manage.delete_all_cookies
   end
 end
 
@@ -11,15 +13,15 @@ When /^I go to the experiment page$/ do
 end
 
 When /^I click on finish$/ do
-  if page.has_content?('Variation 1') && with_a_chance_of(70)
+  if page.has_selector('body.variation-1') && with_a_chance_of(70)
     puts "Click 1!"
     click_link('Finish')
-  elsif page.has_content?('Variation 2') && with_a_chance_of(30)
+  elsif page.has_selector('body.variation-2') && with_a_chance_of(30)
     puts "Click 2!"
     click_link "Page 2"
     click_link "Page 3"
     click_link('Finish')
-  elsif page.has_content?('Variation 3') && with_a_chance_of(50)
+  elsif page.has_selector('body.variation-3') && with_a_chance_of(50)
     puts "Click 3!"
     click_link 'Finish'
   end

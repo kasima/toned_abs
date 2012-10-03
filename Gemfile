@@ -3,6 +3,7 @@ source "http://rubygems.org"
 gem 'rack'
 
 group :test do
+  gem 'pry'
   gem 'cucumber'
   gem 'capybara'
   gem "activesupport"
