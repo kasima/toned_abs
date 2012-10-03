@@ -26,9 +26,11 @@ When /^I click on finish$/ do
     puts "Click 2!"
     click_link "Page 2"
     click_link "Page 3"
-    click_link('Finish')
   elsif body_class == 'variation-3' && with_a_chance_of(50)
     puts "Click 3!"
+    click_link 'Finish'
+  elsif body_class == 'variation-default' && with_a_chance_of(10)
+    puts "Click default!"
     click_link 'Finish'
   end
 end
