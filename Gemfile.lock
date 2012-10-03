@@ -48,6 +48,8 @@ GEM
       libwebsocket (~> 0.1.3)
       multi_json (~> 1.0)
       rubyzip
+    show_me_the_cookies (1.1.3)
+      capybara (~> 1.0)
     slop (3.3.3)
     test-unit (2.5.2)
     xpath (0.1.4)
@@ -64,4 +66,5 @@ DEPENDENCIES
   launchy
   pry
   rack
+  show_me_the_cookies
   test-unit
