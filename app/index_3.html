@@ -3,6 +3,10 @@
   <title>Gettin' Swol</title>
   <script src="//cdn.optimizely.com/js/121122170.js"></script>
 
+  <!-- start Mixpanel --><script type="text/javascript">(function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.1.min.js';d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}var g=a;"undefined"!==typeof f?
+  g=a[f]=[]:f="mixpanel";g.people=g.people||[];h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.identify people.set people.increment".split(" ");for(e=0;e<h.length;e++)d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1})(document,window.mixpanel||[]);
+  mixpanel.init("b587d2b85a1f01623b111cba03a70819");</script><!-- end Mixpanel -->
+
   <script src="/js/script.js"></script>
 
   <script type="text/javascript">
@@ -25,6 +29,6 @@
     Stumptown retro food truck mcsweeney's williamsburg pour-over. Carles hoodie banh mi odd future put a bird on it, viral gastropub raw denim letterpress pitchfork direct trade squid gluten-free food truck umami. Sriracha pour-over twee etsy ethnic lo-fi, gluten-free seitan. Ethnic aesthetic brunch retro echo park. Swag put a bird on it ethical PBR farm-to-table +1. Food truck wes anderson cray, lo-fi small batch farm-to-table next level iphone readymade. Craft beer tofu sustainable, swag post-ironic narwhal kogi williamsburg terry richardson.
   </p>
 
-  <a href="#" onclick="window.optimizely.push(['trackEvent', 'finished']);" class="finish">Finish</a>
+  <a href="#" onclick="window.optimizely.push(['trackEvent', 'finished']);mixpanel.track('finish');" class="finish">Finish</a>
 </body>
 </html>
