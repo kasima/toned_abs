@@ -14,7 +14,7 @@
 
     // optimizely event
     if (to === 1) {
-      window.optimizely.push(['trackEvent', 'finished']);
+      parent.optimizely.push(['trackEvent', 'finished']);
     }
 
     // track slide view
