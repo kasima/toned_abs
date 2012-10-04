@@ -1,0 +1,53 @@
+// Classes for slides to use for positioning
+
+section.vcenter {
+  display: table;
+  width: 100%;
+  height:100%;
+
+  .content-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+// Don't display any content if a main slide has only images
+section.image-only .content-wrapper{ display: none }
+
+// For child-images class, position content wrapper at 0,0
+// so that the full-dimension images display properly
+.slide.child-images div.content-wrapper { padding: 0 }
+
+
+// Positions sub-slides with class "replace" absolutely so they all sit at the same y prop
+// TODO: deal with specificity to override deck!
+section.slide > div.content-wrapper > div.nested-wrapper > div.slide.normal.replace {
+  position:absolute;
+  top:0;
+}
+
+// centered sub-slides
+section.has-centered-children {
+  height: 100%;
+
+  .nested-wrapper {
+    position:absolute;
+    top: 0;
+    display: table;
+    width: 100%;
+    height: 100%;
+
+    .content-wrapper {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+
+
+.deck-container .build-up {
+  @extend .vcenter;
+  div.slide {
+    margin-top: 18px;
+  }
+}

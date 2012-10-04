@@ -1,0 +1,4 @@
+# EXAMPLE ONLY:  this file should be called stacker_config.yaml and be located in the project's root directory
+config:
+  spreadsheet_key: 0AvXsgHX7wggadEU5TkNXRUFPQUtPYWVlck1tOGI3Ymcy
+  worksheet_index: 0

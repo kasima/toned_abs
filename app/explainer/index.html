@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>Newsbound</title>
+
+
+  <link rel="stylesheet" href="stylesheets/main.css">
+  <link rel="stylesheet" href="stacker/widget/widget.css">
+
+
+    <!-- Required Modernizr file -->
+
+    <script src="stacker/lib/modernizr.custom.js"></script>
+
+<script type="text/javascript" src="//use.typekit.net/gwj4hkn.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<!-- start Mixpanel --><script type="text/javascript">(function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.1.min.js';d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}var g=a;"undefined"!==typeof f?
+g=a[f]=[]:f="mixpanel";g.people=g.people||[];h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.identify people.set people.increment".split(" ");for(e=0;e<h.length;e++)d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1})(document,window.mixpanel||[]);
+mixpanel.init("d2d317ac4295e4ee7e90bdaa719ec90d");</script><!-- end Mixpanel -->
+
+</head>
+<body>
+
+<div class="stack">
+  <div class="deck-container">
+  </div>
+  <div class="deck-intro"></div>
+
+  <div class="deck-progress">
+      <div class="progress-current"></div>
+  </div>
+
+  <p class="deck-status">
+    <span class="deck-status-current"></span>
+    /
+    <span class="deck-status-total"></span>
+  </p>
+
+  <div class="widget">
+      <a href="#" id="toc-button" title="TOC"></a>
+    <div class="widget-nav">
+      <a href="#" class="deck-prev-link" title="Previous"></a>
+      <a href="#" id="source-button" class="source"></a>
+      <a href="#" class="deck-next-link" title="Next"></a>
+    </div>
+
+    <div id="source-panel">
+      <h2>Sources</h2>
+          <div class="links"></div>
+    </div>
+      <div id="toc-panel">
+      <h2>Sections</h2>
+          <div class="links">
+              <a href="#chapter_1">1) Where is the push for Voter ID laws coming from?</a>
+              <a href="#chapter_2">2) Is voter fraud that big of an issue?</a>
+              <a href="#chapter_3">3) What's the problem with asking voters to show ID?</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- includes -->
+
+
+
+<!-- General Libraries -->
+<script src="stacker/lib/jquery-1.7.2.min.js"></script>
+<script src="stacker/lib/jquery.csv.min.js"></script>
+<script src="stacker/lib/ICanHaz.min.js"></script>
+
+<!-- Deck libraries -->
+<script src="stacker/javascripts/newsbound.deck.core.js"></script>
+<script src="stacker/lib/deckjs/extensions/hash/deck.hash.js"></script>
+<script src="stacker/lib/deckjs/extensions/status/deck.status.js"></script>
+<script src="stacker/lib/deckjs/extensions/navigation/deck.navigation.js"></script>
+
+<!-- Stacker Application -->
+<script src="stacker/javascripts/application.js"></script>
+<script src="stacker/javascripts/templates.js"></script>
+<script src="stacker/javascripts/content_loader.js"></script>
+
+
+<!-- Stack config and initialization -->
+<script src="main.js"></script>
+
+
+
+
+
+
+
+
+
+<!-- ICanHaz templates -->
+<script id="default" type="text/html">
+  <section class="slide {{classes}}" id="{{id}}">
+    <div class="bg"></div>
+    <div class="images"></div>
+    <div class="content-wrapper row">
+        <div class="body" >{{{text}}}</div>
+        <div class="nested-wrapper">
+        {{#slides}}
+          <div class="slide {{classes}}" id="{{id}}">
+              <div class="images"></div>
+              <div class="body">{{{text}}}</div>
+          </div>
+        {{/slides}}
+        </div>
+    </div>
+  </section>
+</script>
+
+<script id="centered_plain_text" type="text/html">
+  <section class="slide {{classes}}" id="{{id}}">
+    {{#slides}}
+      <div class="slide {{classes}} nested-wrapper">
+        <div class="content-wrapper">
+          <div class="body">{{{text}}}</div>
+        </div>
+      </div>
+    {{/slides}}
+  </section>
+</script>
+
+</body>
+</html>

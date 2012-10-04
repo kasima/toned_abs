@@ -1,0 +1,41 @@
+
+.custom-banner {
+  // this selects all the elements with .body (which are text)
+  // that are in child slides
+  // Use multiples of $gridUnit to align to the grid
+  .slide .body {
+    margin-left: $gridUnit * 4;
+    margin-top: $gridUnit * 3;
+  }
+}
+
+.white-text {
+	color:  #e7e7e7 ;
+}
+
+.map-sequence {
+  .slide .body {
+    margin-top: $gridUnit *1;
+  }
+}
+
+.text-white {
+  .body {
+    color: white;
+  }
+}
+
+.nb-banner-replace {
+  > .content-wrapper {
+    > .body {
+      margin-left: 115px;
+      font-size: $fontSizeSmall1 + 3;
+    }
+  }
+}
+
+.opacity-lower {
+  .images img {
+    opacity: .5;
+  }
+}

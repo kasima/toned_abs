@@ -1,0 +1,96 @@
+
+
+// Template: nb-text-continue-inline
+section.inline {
+  text-align: left;
+  .content-wrapper {
+    margin-top: $marginTopBottom;
+    margin-left: $marginLeftRight;
+    margin-right: $marginLeftRight;
+    .body {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  .body, .nested-wrapper, .nested-wrapper .slide {
+    display: inline;
+  }
+}
+
+
+// Template: nb-text-align-bottom
+section.nb-text-align-bottom {
+  .content-wrapper {
+    height: 100%;
+    .body {
+      position:absolute;
+      bottom: $marginTopBottom;
+    }
+  }
+}
+
+// Template: nb-text-align-top
+section.nb-text-align-top {
+  .content-wrapper {
+    > .body {
+      margin-top: $marginTopBottom;
+    }
+  }
+}
+
+section.nb-banner-replace {
+  > div.content-wrapper {
+    > .body {
+      margin-top: $marginTopBottom;
+    }
+    > div.nested-wrapper > div.slide.replace {
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
+section.nb-image-children {
+  > div.content-wrapper {
+    > .body {
+      margin-top: $marginTopBottom;
+    }
+    > div.nested-wrapper {
+      position: absolute;
+      top: 0;
+      .slide {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+section.nb-image-children-fade {
+  @extend section.nb-image-children;
+}
+section.nb-image-children-replace {
+  @extend section.nb-image-children;
+}
+section.nb-image-children-fade-replace {
+  @extend section.nb-image-children;
+}
+
+section.nb-image-fade-text-replace {
+  @extend section.nb-image-children;
+
+  // Hide body text in previous slides
+  .deck-previous.body-replace .body, .deck-before.body-replace .body{
+    display: none;
+  }
+}
+
+section.nb-text-samesame-image-different {
+  @extend section.nb-image-children;
+}
+
+section[class*="nb-column"] {
+  .body {
+    margin: 0;
+  }
+}
+

@@ -1,0 +1,59 @@
+
+
+// STYLE GUIDE FOR THIS EXPLAINER
+// (Must go above main.css import)
+$bodyBackgroundColor:     black;
+$backgroundColor:         #cabdab;
+$textColor:               #1e1b1b;
+$font:                   "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2"; // set to your Google font if using one.
+$normalFontWeight:        200;
+$lineHeight:              1.3;
+$letterSpacing:           0px;
+
+$fontSizeDefault:         28px;
+$fontSizeSmall1:          22px;
+$fontSizeSmall2:          17px;
+$fontSizeLarge1:          34px;
+$fontSizeLarge2:          42px;
+
+$marginLeftRight:         40px;
+$marginTopBottom:         40px;
+$buildupSpacing:          20px;
+
+$gridUnit:                20px;
+
+// import from Stacker core so we can use mixins
+@import "../stacker/stylesheets/stacker_main";
+
+
+
+// Switch font to your preferred font
+//@import url(http://fonts.googleapis.com/css?family=Neuton:200,300,400);
+
+body {
+  background-color: $bodyBackgroundColor;
+  .deck-progress {
+    margin-left: 0;
+  }
+
+  .deck-container {
+    margin: 0 0;
+    background-color: $backgroundColor;
+
+    font-family:    $font;
+    font-weight:    $normalFontWeight;
+    color:          $textColor;
+    font-size:      $fontSizeDefault;
+    line-height:    $lineHeight;
+    letter-spacing: $letterSpacing;
+
+  }
+}
+
+
+
+// import individual slide styles
+@import "id_slides";
+@import "classes";
+
+

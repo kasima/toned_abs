@@ -1,0 +1,15 @@
+
+/* Progress bar and status slide counter */
+.deck-progress {
+  height: 5px;
+  background-color: #616161;
+  margin: 0 auto;
+
+  .progress-current {
+    background-color: #9c9c9c;
+    width: 0;
+    height:5px;
+  }
+}
+
+p.deck-status { display:none }

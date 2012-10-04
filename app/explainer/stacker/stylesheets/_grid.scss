@@ -1,0 +1,25 @@
+
+//  Generates classes e.g.
+//
+//  section .body.grid-left-1 {
+//    margin-left: 40px;
+//  }
+//  section .body.grid-left-2 {}
+//    margin-left: 80px;
+//  }
+//
+// etc.
+
+@for $i from 1 through 30 {
+  section .body.grid-left-#{$i} {
+    margin-left: $gridUnit * $i;
+  }
+  section .body.grid-top-#{$i} {
+    margin-top: $gridUnit * $i;
+  }
+  section .body.grid-width-#{$i} {
+    width: $gridUnit * $i;
+  }
+};
+
+
