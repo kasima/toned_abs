@@ -13,7 +13,8 @@
     var current_slide = $.deck("getSlides")[to]
 
     // optimizely event
-    if (to === 1) {
+    if (to === 10) {
+      parent.optimizely = parent.optimizely || [];
       parent.optimizely.push(['trackEvent', 'finished']);
     }
 
