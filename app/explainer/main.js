@@ -13,9 +13,10 @@
     var current_slide = $.deck("getSlides")[to]
 
     // optimizely event
-    if (to === 10) {
-      parent.optimizely = parent.optimizely || [];
-      parent.optimizely.push(['trackEvent', 'finished']);
+    if (to === 5) {
+      // parent.optimizely = parent.optimizely || [];
+      // parent.optimizely.push(['trackEvent', 'finished']);
+      window.optimizely.push(['trackEvent', 'finished']);
     }
 
     // track slide view
